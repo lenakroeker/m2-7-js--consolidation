@@ -62,6 +62,18 @@ const favoriteDessertsGroupB = {
 
 function groupByValue(obj) {
   // do something
+  let switchObj = {};
+  let valArr = Object.values(obj);
+  valArr.map(function (val) {
+
+    if (!("val" in switchObj)) {
+      switchObj[val] = [];
+    }
+  })
+  for (const [key, value] of Object.entries(obj)) {
+    switchObj[value].push(key);
+  }
+  return switchObj;
 }
 
 // Verification via console.log()

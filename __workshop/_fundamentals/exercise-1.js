@@ -82,6 +82,49 @@ const inputData = {
 
 function transformData(data) {
   // Your code here
+
+  function getSuper(power1, power2) {
+    let powerArr = [];
+    if (power1) {
+      powerArr.push(power1);
+    }
+    if (power2) {
+      powerArr.push(power2);
+    }
+    return powerArr;
+  }
+
+  let endData = {
+    name: data.name,
+    age: data.age,
+    status: data.status,
+    address: {
+      streetAddress: data.address1,
+      city: data.addressCity,
+      state: data.addressState,
+      country: data.addressCountry
+    },
+  }
+
+  endData.superpowers = getSuper(data.superpower1, data.superpower2);
+
+  let mother = {
+    type: "mother",
+    name: data.motherName,
+    age: data.motherAge,
+    status: data.motherStatus,
+    superpowers: getSuper(data.motherSuperpower1, data.motherSuperpower2),
+  };
+  let girlfriend = {
+    type: "girlfriend",
+    name: data.girlfriendName,
+    age: data.girlfriendAge,
+    status: data.girlfriendStatus,
+    superpowers: getSuper(data.girlfriendSuperpower1, data.girlfriendSuperpower2)
+  };
+
+  endData.relationships = [mother, girlfriend];
+  return endData;
 }
 
 // Use a console.log to verify

@@ -54,6 +54,13 @@ const favoriteDessertsGroupB = {
 
 function sortByPopularity(obj) {
   // Write code
+  let freq = {};
+  let treatList = Object.values(obj)
+  treatList.forEach(value => freq[value] = 0);
+  let unique = treatList.filter(value => ++freq[value] == 1);
+  return unique.sort(function (a, b) {
+    return freq[b] - freq[a];
+  });
 }
 
 // Verification via console.log()

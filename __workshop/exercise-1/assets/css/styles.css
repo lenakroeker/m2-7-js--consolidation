@@ -20,7 +20,7 @@ body {
   min-width: 320px;
 }
 
-.bacon {
+.buttonarea {
   background: var(--beau-blue);
   position: relative;
   display: flex;
@@ -30,11 +30,11 @@ body {
   z-index: 1;
 }
 
-.bivrip {
+.btndiv {
   margin: 4px;
 }
 
-.bivrip .boom {
+.btndiv .btn {
   background: transparent;
   border: 3px solid var(--ksu-purple);
   padding: 14px 32px;
@@ -59,14 +59,14 @@ body {
   overflow: hidden;
 }
 
-.boom.active,
-.boom:hover {
+.btn.active,
+.btn:hover {
   background: var(--ksu-purple);
   border-color: transparent;
   color: white;
 }
 
-.what-now {
+.numdiv {
   min-height: var(--large-band-height);
   display: flex;
   justify-content: center;
